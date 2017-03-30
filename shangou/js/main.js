@@ -110,7 +110,6 @@ $(function(){
     var now=0
     var next=0
     function move(type){
-        console.log(imgs.length);
         type=type||"rights"
         if(type=="rights") {
             next++;
