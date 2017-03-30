@@ -46,9 +46,26 @@ $(function(){
         }
     })
     //监测浏览器宽度
+    var oL=$(".nav_nav_active").offset();
+    var oW=$(".nav_nav").offset();
+    oY=(oL.left-oW.left)+"px";
+    $(".flexbox").css({left:oY});
+    var nava=document.getElementsByClassName("nav_nav_a");
+    for(var i=0;i<nava.length;i++){
+        nava[i].onmousemove=function(){
+            $(".flexbox").stop().animate({left:this.offsetLeft},200);
+        };
+    }
+    $(".nav_nav").mouseleave(function(){
+        $(".flexbox").animate({left:oY});
+    })
     $(window).resize(function(){
         var ch=$(window).height();
         var cw=$(window).width();
+        var oL=$(".nav_nav_active").offset();
+        var oW=$(".nav_nav").offset();
+        oY=(oL.left-oW.left)+"px";
+        $(".flexbox").css({left:oY});
         $(".small_nav").css({"width":clientW})
         if(cw>750){
             $(".menu_bottom li a").css({
@@ -60,44 +77,6 @@ $(function(){
             })
         }
     })
-    // function lunbo(father,fathers,time){
-    //     $(father+">.imgbox>div").hide().eq(0).show();
-    //     function move(type){
-    //         type=type||"right";
-    //         var num=$(fathers+">.active").index()
-    //         if(type=="right"){
-    //             num++;
-    //             if(num>=$(father+">.imgbox>div").length){
-    //                 num=0;
-    //             }
-    //         }else if(type=="left"){
-    //             num--;
-    //             if(num<0){
-    //                 num=$(father+">.imgbox>div").length-1;
-    //             }
-    //         }
-    //         $(father+">.imgbox>div").fadeOut(600).eq(num).fadeIn(800)
-    //         $(father+">.btn>div").removeClass().eq(num).addClass("active")
-    //     }
-    //     var t=setInterval(move,time);
-    //     $(father).mouseover(function(){
-    //         clearInterval(t);
-    //         $(father+">.rightbn").show();
-    //         $(father+">.leftbn").show();
-    //     })
-    //     $(father).mouseout(function(){
-    //         t=setInterval(move,time)
-    //         $(father+">.rightbn").hide();
-    //         $(father+">.leftbn").hide();
-    //     })
-    //     $(father+">.leftbn").click(function(){
-    //         move("left")
-    //     })
-    //     $(father+">.rightbn").click(function(){
-    //         move();
-    //     })
-    // }
-    // lunbo(".banner","#btn1",2000)
     var imgbox=$(".imgbox")[0]
     var imgs=$(".img_box",imgbox);
     var conx=$("div",$(".btn")[0]);
@@ -139,14 +118,19 @@ $(function(){
     for(var i=0;i<imgs.length;i++){
         conx[i].aa=i
         conx[i].onclick=function(){
-            next=this.aa
-            imgs[next].style.left="100%";
-            imgs[now].style.left="0px";
-            $(imgs).eq(now).animate({left:"-100%"});
-            $(imgs).eq(next).animate({left:"0"});
-            conx[now].className="";
-            conx[next].className="active";
-            now=next;
+            if(this.aa==now){
+                return;
+            }
+            else{
+                next=this.aa
+                imgs[next].style.left="100%";
+                imgs[now].style.left="0px";
+                $(imgs).eq(now).animate({left:"-100%"});
+                $(imgs).eq(next).animate({left:"0"});
+                conx[now].className="";
+                conx[next].className="active";
+                now=next;
+            }
         }
     }
               $(alls).mouseover(function(){
