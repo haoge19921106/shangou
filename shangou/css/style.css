@@ -1,6 +1,9 @@
 html,body{
     margin: 0;padding: 0;
 }
+body{
+    width: 100%;
+}
 a,li,ul,h1,h2,h3,h4,h5,h6{
     list-style: none;text-decoration: none;
 }
@@ -39,12 +42,15 @@ a,li,ul,h1,h2,h3,h4,h5,h6{
 }
 .img_box1{
     background:url("../images/index/banner_1.png") center center no-repeat;
+    background-size: cover;
 }
 .img_box2{
     background:url("../images/index/banner_2.png") center center no-repeat;
+    background-size: cover;
 }
 .img_box3{
     background:url("../images/index/banner_3.png") center center no-repeat;
+    background-size: cover;
 }
 .btn{
     width: 135px;
@@ -271,19 +277,6 @@ a,li,ul,h1,h2,h3,h4,h5,h6{
     margin-bottom: 6%;
     padding-bottom: 1%;
 }
-.sellers .row span{
-    width: 624px;
-    height: auto;
-    font-size: 36px;
-    border-bottom: 1px solid #f0245d;
-    color: #515151;
-    margin:0 auto;
-    display: block;
-    text-align: center;
-    margin-top: 10%;
-    margin-bottom: 6%;
-    padding-bottom: 1%;
-}
 .webBox{width:1100px; margin:100px auto;}
 .webBox ul{position:relative;height:900px;}
 .webBox li{position:absolute;width:0;height:0;z-index:0;cursor:pointer;overflow:hidden;top:152px; left:10px;box-shadow:0px 30px 30px #eee}
@@ -421,13 +414,9 @@ a,li,ul,h1,h2,h3,h4,h5,h6{
 
 /*about*/
 .about .row span{
-    width: 624px;
-    height: auto;
-    font-size: 36px;
+    font-size: 0.36rem;
     border-bottom: 1px solid #515151;
     color: #515151;
-    margin:0 auto;
-    display: block;
     text-align: center;
     margin-top: 5%;
     margin-bottom: 6%;
@@ -440,16 +429,12 @@ a,li,ul,h1,h2,h3,h4,h5,h6{
 }
 .team{
     margin-bottom: 5%;
-    width: 80%;
+    /*width: 80%;*/
 }
 .team .row span{
-    width: 624px;
-    height: auto;
-    font-size: 36px;
+    font-size: 0.36rem;
     border-bottom: 1px solid #515151;
     color: #515151;
-    margin:0 auto;
-    display: block;
     text-align: center;
     margin-top: 5%;
     margin-bottom: 6%;
@@ -475,7 +460,7 @@ a,li,ul,h1,h2,h3,h4,h5,h6{
     margin-right: 10%;
 }
 .ios-box{
-    float: left;
+    float: right;
 }
 .and-code,.ios-code{
     display: none;
@@ -483,12 +468,15 @@ a,li,ul,h1,h2,h3,h4,h5,h6{
 .code{
     margin-top: 33%;
 }
+.down-img{
+    margin-left: 25%;
+}
 
 /*view*/
 .view .row span{
-    width: 624px;
-    height: auto;
-    font-size: 36px;
+    /*width: 624px;
+    height: auto;*/
+    font-size: 0.36rem;
     color: #515151;
     display: block;
     text-align: left;
@@ -505,7 +493,7 @@ a,li,ul,h1,h2,h3,h4,h5,h6{
     width: 100%;
     height: 70%;
     border: 0;
-    font-size: 24px;
+    font-size: 0.24rem;
     color: #cccaca;
 }
 .view-btn{
@@ -515,20 +503,16 @@ a,li,ul,h1,h2,h3,h4,h5,h6{
     border: 0;
     background: #f0245d;
     color: #fff;
-    font-size: 36px;
+    font-size: 0.36rem;
 }
 /*seller*/
 .seller{
     margin-bottom: 200px;
 }
 .seller .row span{
-    width: 624px;
-    height: auto;
-    font-size: 36px;
+    font-size: 0.36rem;
     border-bottom: 1px solid #f0245d;
     color: #515151;
-    margin:0 auto;
-    display: block;
     text-align: center;
     margin-top: 10%;
     margin-bottom: 6%;
@@ -539,5 +523,93 @@ a,li,ul,h1,h2,h3,h4,h5,h6{
     height: 292px;
     position:relative;
     background-image: url(../images/seller/settled_flow.png) ;
-    background-size:100% 100% ;
+    background-size:cover;
+}
+
+@media screen and (max-width: 414px){
+    .banner{
+        height: 225px;
+    }
+    .dwon_img{
+        margin-left: 11%;
+    }
+    .code {
+        margin-top: 20%;
+    }
+    .down-img{
+        margin-left: 11%;
+    }
+    .and-box {
+        float: left;
+        margin-right: 3%;
+        width: 47%;
+    }
+    .ios-box {
+        width: 47%;
+    }
+    .and-box img{
+        width: 100%;
+    }
+    .ios-box img{
+        width: 100%;
+    }
+    .map {
+        height: 270px;
+    }
+    .about-inner p {
+        font-size: 0.3rem;
+        padding: 0 8%;
+    }
+    .view-text {
+        height: 63%;
+    }
+    .view-form {
+        width: 90%;
+        height: 260px;
+        margin: 0 5% 8%;
+    }
+    .view .row span {
+        padding-left: 5%;
+    }
+    .contact-title {
+        margin-top: 4%;
+    }
+    .map img{
+        width: 6%;
+        margin-bottom: 3%;
+    }
+    .team-one, .team-two,.team-three{
+        height: 220px;
+    }
+    .first-home,.second-home,.third-home {
+        margin: 10% auto 10%;
+    }
+    .introbute-bg {
+        height: 136px;
+    }
+    .home-second {
+        height: 220px;
+    }
+    .voice,.gorup,.video {
+        height: 242px;
+    }
+    .phone-img {
+        width: 92%;
+    }
+    .phone-img{
+        margin: 0% 4% 5%;
+        width: 92%;
+    }
+    .phone-p{
+        margin: 10% 0;
+    }
+    .view-btn {
+        margin: 10% 8% 0 0;
+    }
+    .seller_img {
+        height: 87px;
+    }
+    .seller{
+        margin-bottom: 66px;
+    }
 }

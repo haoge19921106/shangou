@@ -173,16 +173,73 @@ $(function(){
         $(".group_hover").css({animation:"voiceout 1s linear forwards"});
 
     })
-    $(".and-box").mouseenter(function(){
-        $(".and-code").css({display:"block"})
-    })
-    $(".and-box").mouseleave(function(){
-        $(".and-code").css({display:"none"})
-    })
-    $(".ios-box").mouseenter(function(){
-        $(".ios-code").css({display:"block"})
-    })
-    $(".ios-box").mouseleave(function(){
-        $(".ios-code").css({display:"none"})
-    })
+    // $(".and-box").mouseenter(function(){
+    //     $(".and-code").css({display:"block"})
+    // })
+    // $(".and-box").mouseleave(function(){
+    //     $(".and-code").css({display:"none"})
+    // })
+    // $(".ios-box").mouseenter(function(){
+    //     $(".ios-code").css({display:"block"})
+    // })
+    // $(".ios-box").mouseleave(function(){
+    //     $(".ios-code").css({display:"none"})
+    // })
+    var win = window,
+    doc = document;
+    function setFontSize() {
+    　　var winWidth = $(window).width();
+     
+    　　//750这个数字是根据你的设计图的实际大小来的，所以值具体根据设计图的大小
+    　　var size = (winWidth / 750) * 100;
+    　　doc.documentElement.style.fontSize = (size < 100 ? size : 100) + 'px';
+    };
+    //这里我们给个定时器来实现页面加载完毕再进行字体设置
+    setTimeout(function() {
+    　　//初始化
+    　　setFontSize();
+    }, 100);
+
+
+     var browser = {
+        versions: function () {
+           var u = navigator.userAgent, app = navigator.appVersion;
+            return {     //移动终端浏览器版本信息
+              trident: u.indexOf('Trident') > -1, //IE内核
+              presto: u.indexOf('Presto') > -1, //opera内核
+              webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+              gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+              mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+              ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+              android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或uc浏览器
+              iPhone: u.indexOf('iPhone') > -1, //是否为iPhone或者QQHD浏览器
+              iPad: u.indexOf('iPad') > -1, //是否iPad
+              webApp: u.indexOf('Safari') == -1 //是否web应该程序，没有头部与底部
+            };
+        }(),
+         language: (navigator.browserLanguage || navigator.language).toLowerCase()
+    }            
+    if (browser.versions.mobile) {//判断是否是移动设备打开。browser代码在下面
+        $(".ios").click(function(){
+            $(".ios-code").toggle()
+        })
+         $(".android").click(function(){
+            $(".and-code").toggle()
+        })
+    } else {
+       //否则就是PC浏览器打开
+        $(".android").mouseenter(function(){
+            $(".and-code").css({display:"block"})
+        })
+        $(".android").mouseleave(function(){
+            $(".and-code").css({display:"none"})
+        })
+       
+        $(".ios").mouseenter(function(){
+            $(".ios-code").css({display:"block"})
+        })
+        $(".ios").mouseleave(function(){
+            $(".ios-code").css({display:"none"})
+        })
+    }
 })
