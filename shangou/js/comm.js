@@ -12,7 +12,7 @@ ZoomPic.prototype={initialize:function(id)
 {this.aSort.unshift(this.aSort.pop());this.setUp()},doNext:function()
 {this.aSort.push(this.aSort.shift());this.setUp()},doImgClick:function()
 {var _this=this;for(var i=0;i<this.aSort.length;i++)
-	{this.aSort[i].onclick=function()
+{this.aSort[i].onclick=function()
 {if(this.index>_this.iCenter)
 {for(var i=0;i<this.index-_this.iCenter;i++)_this.aSort.push(_this.aSort.shift());_this.setUp()}
 else if(this.index<_this.iCenter)
