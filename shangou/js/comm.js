@@ -31,7 +31,7 @@ ZoomPic.prototype={initialize:function(id)
                       {width:96,height:171,top:20,left:123,zIndex:4},
                       {width:83,height:149,top:29,left:174,zIndex:3},
                       {width:68,height:122,top:38,left:218,zIndex:2},
-                      {width:68,height:122,top:38,left:143,zIndex:1},];;
+                      {width:68,height:122,top:38,left:143,zIndex:1},];
     } else {
         //否则就是PC浏览器打开
         this.options=[{width:350,height:623,top:196,left:0,zIndex:1},{width:350,height:623,top:196,left:0,zIndex:2},{width:427,height:760,top:148,left:160,zIndex:3},{width:491,height:873,top:100,left:348,zIndex:4},{width:427,height:760,top:148,left:608,zIndex:3},{width:350,height:623,top:196,left:834,zIndex:2},{width:350,height:623,top:196,left:450,zIndex:1},];

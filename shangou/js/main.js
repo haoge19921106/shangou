@@ -220,14 +220,10 @@ $(function(){
         $(".sellerBox ul").css({height:"176px"});
         $(".webBox").css({marginBottom:"30px"});
         $(".sellerBox").css({marginBottom:"30px"});
-        $(".webBox .prev").css({width:"30px",height:"30px",left:"0px"});
-        $(".webBox .prev img").css({width:"100%",height:"auto"});
-        $(".webBox .next").css({width:"30px",height:"30px",right:"0px"});
-        $(".webBox .next img").css({width:"100%",height:"auto"});
-        $(".sellerBox .prev").css({width:"30px",height:"30px",left:"10px"});
-        $(".sellerBox .prev img").css({width:"100%",height:"auto"});
-        $(".sellerBox .next").css({width:"30px",height:"30px",right:"15px"});
-        $(".sellerBox .next img").css({width:"100%",height:"auto"})
+        $(".webBox .prev").css({display:"none"});
+        $(".webBox .next").css({display:"none"});
+        $(".sellerBox .prev").css({display:"none"});
+        $(".sellerBox .next").css({display:"none"});
     } else {
        //否则就是PC浏览器打开
         $(".android").mouseenter(function(){
@@ -249,11 +245,11 @@ $(function(){
         $(".sellerBox").css({marginBottom:"100px"});
         $(".webBox .prev").css({width:"90px",height:"90px",left:"-190px"});
         $(".webBox .prev img").css({width:"100%",height:"auto"});
-        $(".webBox .next").css({width:"90px",height:"90px",right:"-300px"});
+        $(".webBox .next").css({width:"90px",height:"90px",right:"-250px"});
         $(".webBox .next img").css({width:"100%",height:"auto"})
         $(".sellerBox .prev").css({width:"90px",height:"90px",left:"-190px"});
         $(".sellerBox .prev img").css({width:"100%",height:"auto"});
-        $(".sellerBox .next").css({width:"90px",height:"90px",right:"-300px"});
+        $(".sellerBox .next").css({width:"90px",height:"90px",right:"-250px"});
         $(".sellerBox.next img").css({width:"100%",height:"auto"})
     }
 })
