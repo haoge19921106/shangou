@@ -173,18 +173,6 @@ $(function(){
         $(".group_hover").css({animation:"voiceout 1s linear forwards"});
 
     })
-    // $(".and-box").mouseenter(function(){
-    //     $(".and-code").css({display:"block"})
-    // })
-    // $(".and-box").mouseleave(function(){
-    //     $(".and-code").css({display:"none"})
-    // })
-    // $(".ios-box").mouseenter(function(){
-    //     $(".ios-code").css({display:"block"})
-    // })
-    // $(".ios-box").mouseleave(function(){
-    //     $(".ios-code").css({display:"none"})
-    // })
     var win = window,
     doc = document;
     function setFontSize() {
@@ -225,7 +213,21 @@ $(function(){
         })
          $(".android").click(function(){
             $(".and-code").toggle()
-        })
+        });
+        $(".sellers").css({width:"100%",overflow:"hidden"})
+        $(".website").css({width:"100%",overflow:"hidden"})
+        $(".webBox ul").css({height:"176px"});
+        $(".sellerBox ul").css({height:"176px"});
+        $(".webBox").css({marginBottom:"30px"});
+        $(".sellerBox").css({marginBottom:"30px"});
+        $(".webBox .prev").css({width:"30px",height:"30px",left:"0px"});
+        $(".webBox .prev img").css({width:"100%",height:"auto"});
+        $(".webBox .next").css({width:"30px",height:"30px",right:"0px"});
+        $(".webBox .next img").css({width:"100%",height:"auto"});
+        $(".sellerBox .prev").css({width:"30px",height:"30px",left:"10px"});
+        $(".sellerBox .prev img").css({width:"100%",height:"auto"});
+        $(".sellerBox .next").css({width:"30px",height:"30px",right:"15px"});
+        $(".sellerBox .next img").css({width:"100%",height:"auto"})
     } else {
        //否则就是PC浏览器打开
         $(".android").mouseenter(function(){
@@ -241,5 +243,17 @@ $(function(){
         $(".ios").mouseleave(function(){
             $(".ios-code").css({display:"none"})
         })
+        $(".webBox ul").css({height:"900px"});
+        $(".sellerBox ul").css({height:"900px"});
+        $(".webBox").css({marginBottom:"100px"});
+        $(".sellerBox").css({marginBottom:"100px"});
+        $(".webBox .prev").css({width:"90px",height:"90px",left:"-190px"});
+        $(".webBox .prev img").css({width:"100%",height:"auto"});
+        $(".webBox .next").css({width:"90px",height:"90px",right:"-300px"});
+        $(".webBox .next img").css({width:"100%",height:"auto"})
+        $(".sellerBox .prev").css({width:"90px",height:"90px",left:"-190px"});
+        $(".sellerBox .prev img").css({width:"100%",height:"auto"});
+        $(".sellerBox .next").css({width:"90px",height:"90px",right:"-300px"});
+        $(".sellerBox.next img").css({width:"100%",height:"auto"})
     }
 })

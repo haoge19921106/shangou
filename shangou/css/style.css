@@ -267,40 +267,42 @@ a,li,ul,h1,h2,h3,h4,h5,h6{
 }
 .website .row span{
    font-size: 0.36rem;
-    border-bottom: 1px solid #f0245d;
+    border-bottom: 2px solid #f0245d;
     color: #515151;
     text-align: center;
     margin-top: 10%;
     margin-bottom: 0%;
     padding-bottom: 1%;
 }
-.webBox{/*width:1100px;*/ margin-bottom: 100px;}
-.webBox ul{position:relative;height:900px;}
-.webBox li{position:absolute;width:0;height:0;z-index:0;cursor:pointer;overflow:hidden;top:152px; left:10px;box-shadow:0px 30px 30px #eee}
+.webBox{width:100%;}
+.webBox ul{position:relative;height:auto}
+.webBox li{position:absolute;width:0;height:0;z-index:0;cursor:pointer;overflow:hidden;top:152px; left:10px;box-shadow:0px 10px 25px #eee}
 .webBox li img{width:100%;height:100%;vertical-align:top; float:left; border:0;}
-.webBox .prev, .webBox .next{position:absolute;top:0;bottom:0;margin:auto 0;width: 90px;height: 90px;background: 0;right:-200px;border: 0};
-
 .webBox .prev{
-    left:-200px !important;
+    position:absolute;top:0;bottom:0;margin:auto 0;background: 0;border: 0;
+}
+.webBox .next{
+    position:absolute;top:0;bottom:0;margin:auto 0;background: 0;border: 0;
 }
 
 .sellers .row span{
     font-size: 0.36rem;
-    border-bottom: 1px solid #f0245d;
+    border-bottom: 2px solid #f0245d;
     color: #515151;
     text-align: center;
     margin-top: 10%;
-    margin-bottom: 6%;
+    margin-bottom: 0%;
     padding-bottom: 1%;
 }
-.sellerBox{width:1100px; margin-bottom: 100px;}
-.sellerBox ul{position:relative;height:900px;}
-.sellerBox li{position:absolute;width:0;height:0;z-index:0;cursor:pointer;overflow:hidden;top:152px; left:10px;box-shadow:0px 20px 20px #eee}
-.sellerBoxli ul li img{width:100%;height:100%;vertical-align:top; float:left; border:0;}
-.sellerBox .prev, .sellerBox .next{position:absolute;top:0;bottom:0;margin:auto 0;width: 90px;height: 90px;background: 0;right:-200px;border: 0};
-
+.sellerBox{width:100%; }
+.sellerBox ul{position:relative;height:auto}
+.sellerBox li{position:absolute;width:0;height:0;z-index:0;cursor:pointer;overflow:hidden;top:152px; left:10px;box-shadow:0px 10px 25px #eee}
+.sellerBox li img{width:100%;height:100%;vertical-align:top; float:left; border:0;}
 .sellerBox .prev{
-    left:-200px !important;
+    position:absolute;top:0;bottom:0;margin:auto 0;background: 0;border: 0;
+}
+.sellerBox .next{
+    position:absolute;top:0;bottom:0;margin:auto 0;background: 0;border: 0;
 }
 /*talk*/
 .talk{
@@ -409,7 +411,7 @@ a,li,ul,h1,h2,h3,h4,h5,h6{
 }
 .website img{
     vertical-align: middle;
-    margin-right:10px;
+    /*margin-right:10px;*/
 }
 /*Record*/
 .record{
